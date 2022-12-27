@@ -8,7 +8,7 @@ The web page is created with the [**VueJS**](https://vuejs.org) MVVM framework. 
 
 ## Copyright
 
-The soucre code if this project is coevered by the [MIT License](https://github.com/zekroTJA/zekro-de-rewrite/blob/master/LICENSE). When you want to use my code, please follow the conditions mentioned in the license.
+The source code in this project is covered by the [MIT License](https://github.com/zekroTJA/zekro-de-rewrite/blob/master/LICENSE). If you want to use my code, please follow the conditions mentioned in the license.
 
 **Attention: You are not allowed to use my logo or publish it somewhere in any way without my explicit permission.** If you want to use my logo, please contact me (contact[at]zekro.de).
 
