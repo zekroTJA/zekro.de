@@ -31,8 +31,11 @@ def main():
 
     pages = []
     for filename in os.listdir(PAGES_DIR):
+        print(filename)
         name = strip_before_first(strip_after_last(filename, '.'), '_')
         pages.append((name, os.path.join(PAGES_DIR, filename)))
+
+    print("Pages:", pages)
 
     for (pagename, pagepath) in pages:
         pagecontent = get_file_contents(pagepath)
