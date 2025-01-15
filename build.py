@@ -30,8 +30,7 @@ def main():
     shutil.copytree(PUBLIC_DIR, os.path.join(OUTPUT_DIR, "public"))
 
     pages = []
-    for filename in os.listdir(PAGES_DIR):
-        print(filename)
+    for filename in sorted(os.listdir(PAGES_DIR)):
         name = strip_before_first(strip_after_last(filename, '.'), '_')
         pages.append((name, os.path.join(PAGES_DIR, filename)))
 
