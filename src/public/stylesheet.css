@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400,600&display=swap");
+@import url("https://api.fonts.coollabs.io/css2?family=Geist+Mono:wght@400,600&display=swap");
 @import url("https://languages.ranna.dev/languages.bg.css");
 
 :root {
@@ -69,6 +69,7 @@ main {
 
 footer {
   margin-top: auto;
+  padding: 2em 0 1em 0;
   font-size: 0.8em;
   color: var(--clr-text-2);
 }
@@ -92,15 +93,18 @@ footer {
   }
 }
 
-.project-list {
-  margin-top: 2em;
+.column-view {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
   gap: 1em;
 
   @media only screen and (orientation: portrait) {
     grid-template-columns: auto;
   }
+}
+
+.project-list {
+  margin-top: 2em;
 }
 
 .project-tile {
@@ -131,6 +135,41 @@ footer {
         width: 0.7em;
         height: 0.7em;
       }
+    }
+  }
+}
+
+.latest-videos {
+  > * {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+#blogposts {
+  > a {
+    border: solid 1px var(--clr-text);
+    padding: 0.7em;
+
+    text-decoration: none !important;
+    &:hover h3 {
+      text-decoration: underline;
+    }
+
+    > h3,
+    p {
+      margin: 0.3em 0 0 0;
+    }
+
+    > div {
+      width: 100%;
+      aspect-ratio: 16/8;
+      background-size: cover;
+      background-position: center;
+    }
+
+    > p {
+      font-size: 0.8em;
     }
   }
 }
