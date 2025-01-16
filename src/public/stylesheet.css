@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400,600&display=swap");
+@import url("https://languages.ranna.dev/languages.bg.css");
 
 :root {
   --clr-background-1: #222222;
@@ -88,5 +89,48 @@ footer {
 
   img.logo {
     height: 1.25em;
+  }
+}
+
+.project-list {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1em;
+
+  @media only screen and (orientation: portrait) {
+    grid-template-columns: auto;
+  }
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px var(--clr-text);
+  padding: 0.6em;
+
+  text-decoration: none !important;
+  &:hover h3 {
+    text-decoration: underline;
+  }
+
+  > h3 {
+    margin: 0;
+  }
+
+  .langs {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+
+    > div {
+      margin-right: 0.8em;
+      > div {
+        display: inline-block;
+        width: 0.7em;
+        height: 0.7em;
+      }
+    }
   }
 }
