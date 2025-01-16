@@ -24,23 +24,30 @@
   </head>
   <body>
     <div
+      id="warning"
       style="
+        display: flex;
         background-color: #e0c114;
         color: #222222;
         padding: 0.2em 0.4em;
         margin-bottom: 1em;
       "
     >
-      <strong>ATTENTION:</strong>
-      <span
-        >This page is still under construction. All information on this page
-        might not be accurate or up to date! Please continue on
-        <a
-          href="https://www.zekro.de"
-          class="highlight"
-          style="text-decoration-color: #222222"
-          >my official web page</a
-        >!</span
+      <div>
+        <strong>ATTENTION:</strong>
+        <span
+          >This page is still under construction. All information on this page
+          might not be accurate or up to date! Please continue on
+          <a
+            href="https://www.zekro.de"
+            class="highlight"
+            style="text-decoration-color: #222222"
+            >my official web page</a
+          >!</span
+        >
+      </div>
+      <a onclick="document.getElementById('warning').style.display='none'"
+        >[x]</a
       >
     </div>
     <nav class="header">
@@ -55,7 +62,7 @@
 
 <h1>hey</h1>
 I am Ringo Hoffmann; professional Backend and DevOps engineer at
-<a class="highlight" href="https://b12-touch.de/" target="_blank">B12-touch</a>
+<a href="https://b12-touch.de/" target="_blank">B12-touch</a>
 with professional development experience since 2017.
 
 <br />
@@ -69,11 +76,9 @@ infrastructure as code projects.
 <br />
 
 Most of my publicly available work can be found on my
-<a class="highlight" href="https://github.com/zekrotja/" target="_blank"
-  >GitHub</a
->
+<a href="https://github.com/zekrotja/" target="_blank">GitHub</a>
 profile. Or feel free to take a detour through my
-<a class="highlight" href="/projects/">projects overview</a> on my web page.
+<a href="/projects/">projects overview</a> on my web page.
 </main>
     <footer>
       <span>© Ringo Hoffmann 2025-present</span>

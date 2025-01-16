@@ -24,23 +24,30 @@
   </head>
   <body>
     <div
+      id="warning"
       style="
+        display: flex;
         background-color: #e0c114;
         color: #222222;
         padding: 0.2em 0.4em;
         margin-bottom: 1em;
       "
     >
-      <strong>ATTENTION:</strong>
-      <span
-        >This page is still under construction. All information on this page
-        might not be accurate or up to date! Please continue on
-        <a
-          href="https://www.zekro.de"
-          class="highlight"
-          style="text-decoration-color: #222222"
-          >my official web page</a
-        >!</span
+      <div>
+        <strong>ATTENTION:</strong>
+        <span
+          >This page is still under construction. All information on this page
+          might not be accurate or up to date! Please continue on
+          <a
+            href="https://www.zekro.de"
+            class="highlight"
+            style="text-decoration-color: #222222"
+            >my official web page</a
+          >!</span
+        >
+      </div>
+      <a onclick="document.getElementById('warning').style.display='none'"
+        >[x]</a
       >
     </div>
     <nav class="header">
@@ -61,12 +68,9 @@
   <p>
     I make videos about development, tech and anything that I am currently
     interested in on my german YouTube channel
-    <a class="highlight" target="_blank" href="https://youtube.com/@zekrodev"
-      >@zekrodev</a
-    >. Also, I like to do general gaming content on my other german channel
-    <a class="highlight" target="_blank" href="https://youtube.com/@zekrotja"
-      >@zekrotja</a
-    >.
+    <a target="_blank" href="https://youtube.com/@zekrodev">@zekrodev</a>. Also,
+    I like to do general gaming content on my other german channel
+    <a target="_blank" href="https://youtube.com/@zekrotja">@zekrotja</a>.
   </p>
 
   <div class="column-view latest-videos">
@@ -91,9 +95,8 @@
 
   <p>
     On
-    <a class="highlight" target="_blank" href="https://blog.zekro.de">my blog</a
-    >, I post stuff about development, tech and other stuff I am currently
-    interested in.
+    <a target="_blank" href="https://blog.zekro.de">my blog</a>, I post stuff
+    about development, tech and other stuff I am currently interested in.
   </p>
 
   <div id="blogposts" class="column-view"></div>

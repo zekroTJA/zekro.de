@@ -42,14 +42,11 @@ a {
   text-decoration-line: none;
   cursor: pointer;
   text-decoration-thickness: 10%;
+  text-decoration-line: underline;
+  text-decoration-color: var(--clr-text-2);
 
   &:hover {
-    text-decoration-line: underline;
-  }
-
-  &.highlight {
-    text-decoration-line: underline;
-    text-decoration-color: var(--clr-text-2);
+    text-decoration-color: var(--clr-text-1);
   }
 }
 
@@ -72,6 +69,17 @@ footer {
   padding: 2em 0 1em 0;
   font-size: 0.8em;
   color: var(--clr-text-2);
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+ul > li {
+  list-style-type: square;
 }
 
 .header {
@@ -85,6 +93,7 @@ footer {
   & a.active {
     color: var(--clr-accent);
     text-decoration-line: underline;
+    text-decoration-color: var(--clr-accent);
     font-weight: 600;
   }
 

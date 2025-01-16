@@ -24,23 +24,30 @@
   </head>
   <body>
     <div
+      id="warning"
       style="
+        display: flex;
         background-color: #e0c114;
         color: #222222;
         padding: 0.2em 0.4em;
         margin-bottom: 1em;
       "
     >
-      <strong>ATTENTION:</strong>
-      <span
-        >This page is still under construction. All information on this page
-        might not be accurate or up to date! Please continue on
-        <a
-          href="https://www.zekro.de"
-          class="highlight"
-          style="text-decoration-color: #222222"
-          >my official web page</a
-        >!</span
+      <div>
+        <strong>ATTENTION:</strong>
+        <span
+          >This page is still under construction. All information on this page
+          might not be accurate or up to date! Please continue on
+          <a
+            href="https://www.zekro.de"
+            class="highlight"
+            style="text-decoration-color: #222222"
+            >my official web page</a
+          >!</span
+        >
+      </div>
+      <a onclick="document.getElementById('warning').style.display='none'"
+        >[x]</a
       >
     </div>
     <nav class="header">

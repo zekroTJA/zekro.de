@@ -24,23 +24,30 @@
   </head>
   <body>
     <div
+      id="warning"
       style="
+        display: flex;
         background-color: #e0c114;
         color: #222222;
         padding: 0.2em 0.4em;
         margin-bottom: 1em;
       "
     >
-      <strong>ATTENTION:</strong>
-      <span
-        >This page is still under construction. All information on this page
-        might not be accurate or up to date! Please continue on
-        <a
-          href="https://www.zekro.de"
-          class="highlight"
-          style="text-decoration-color: #222222"
-          >my official web page</a
-        >!</span
+      <div>
+        <strong>ATTENTION:</strong>
+        <span
+          >This page is still under construction. All information on this page
+          might not be accurate or up to date! Please continue on
+          <a
+            href="https://www.zekro.de"
+            class="highlight"
+            style="text-decoration-color: #222222"
+            >my official web page</a
+          >!</span
+        >
+      </div>
+      <a onclick="document.getElementById('warning').style.display='none'"
+        >[x]</a
       >
     </div>
     <nav class="header">
@@ -55,7 +62,25 @@
 
 <h1>contact</h1>
 
-<i>soon<sup>tm</sup></i>
+Below, you can find ways to contact me (in order of preference). You can contact
+me in both german or in english - I'm bad at both ^^.
+
+<ul>
+  <li>
+    E-Mail:
+    <a href="mailto:contact@zekro.de">contact@zekro.de</a>
+  </li>
+  <li>
+    Bluesky:
+    <a target="_blank" href="https://bsky.app/profile/zekro.de">@zekro.de</a>
+  </li>
+  <li>
+    Discord:
+    <a target="_blank" href="https://discord.com/users/221905671296253953"
+      >zekrotja</a
+    >
+  </li>
+</ul>
 </main>
     <footer>
       <span>© Ringo Hoffmann 2025-present</span>
