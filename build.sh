@@ -7,4 +7,4 @@ for prescript in scripts/prebuild/*; do
 done
 
 # shellcheck disable=SC2068
-./build.py $@
+python3 build.py $@
