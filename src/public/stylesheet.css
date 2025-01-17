@@ -82,6 +82,10 @@ ul > li {
   list-style-type: square;
 }
 
+.dimm {
+  color: var(--clr-text-2);
+}
+
 .header {
   display: flex;
   gap: 0.6em;
@@ -201,10 +205,30 @@ ul > li {
 }
 
 .photos-grid {
-  > a > div {
-    width: 100%;
-    aspect-ratio: 4/6;
-    background-size: cover;
-    background-position: center;
+  > a {
+    position: relative;
+
+    &::after {
+      content: "Click to see full image and more info!";
+      position: absolute;
+      top: 0.4em;
+      left: 0.4em;
+      opacity: 0;
+      background-color: var(--clr-background-1);
+      padding: 0.2em 0.4em;
+      border: solid 1px var(--clr-text);
+      font-size: 0.8rem;
+    }
+
+    &:hover::after {
+      opacity: 0.75;
+    }
+
+    > div {
+      width: 100%;
+      aspect-ratio: 4/6;
+      background-size: cover;
+      background-position: center;
+    }
   }
 }
