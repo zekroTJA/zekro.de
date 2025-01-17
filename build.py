@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 import datetime
 import logging
@@ -95,6 +97,7 @@ def parse_templates(content: str, pagename: str, pages: list[str], template_dir:
         template = find_next_template(content)
         if not template:
             return content
+
         (start, end, id, args) = template
 
         if id == "extends":
@@ -109,6 +112,16 @@ def parse_templates(content: str, pagename: str, pages: list[str], template_dir:
             content = template_contents[:start] + \
                 content + template_contents[end+1:]
             content = parse_templates(content, pagename, pages, template_dir)
+        elif id == "use":
+            if len(args) == 0:
+                raise Exception(
+                    "template 'use' needs at least one argument")
+            use_template = args[0]
+            template_contents = get_file_contents(
+                template_dir, f"{use_template}.html")
+            template_contents = parse_templates(
+                template_contents, pagename, pages, template_dir)
+            content = content[:start] + template_contents + content[end+1:]
         elif id == "pagename":
             name = pagename
             if pagename in NAV_OVERRIDES:
@@ -129,6 +142,8 @@ def parse_templates(content: str, pagename: str, pages: list[str], template_dir:
         elif id == "currentyear":
             year = datetime.datetime.now().year
             content = content[:start] + str(year) + content[end+1:]
+        else:
+            raise Exception(f"unsupported template '{id}'")
 
 
 def strip_after_last(v: str, delim: str):

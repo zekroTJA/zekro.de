@@ -182,3 +182,29 @@ ul > li {
     }
   }
 }
+
+.second-nav {
+  display: flex;
+  gap: 0.7em;
+  flex-wrap: wrap;
+
+  /* Little hack to hide the first element, 
+     which should be the current page. */
+  > *:first-child {
+    display: none;
+  }
+
+  > * {
+    border: solid 1px var(--clr-text);
+    padding: 0.2em 0.4em;
+  }
+}
+
+.photos-grid {
+  > a > div {
+    width: 100%;
+    aspect-ratio: 4/6;
+    background-size: cover;
+    background-position: center;
+  }
+}
