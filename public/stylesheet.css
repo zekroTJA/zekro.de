@@ -81,6 +81,17 @@ ul > li {
   list-style-type: square;
 }
 
+.emoji-heading {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+
+  > h1:last-child {
+    text-decoration: none;
+    text-shadow: none;
+  }
+}
+
 .dimm {
   color: var(--clr-text-2);
 }
@@ -192,7 +203,7 @@ ul > li {
   gap: 0.7em;
   flex-wrap: wrap;
 
-  /* Little hack to hide the first element, 
+  /* Little hack to hide the first element,
      which should be the current page. */
   > *:first-child {
     display: none;
