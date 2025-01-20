@@ -1,22 +1,12 @@
 #!/usr/bin/env python3
 
 import argparse
+from dataclasses import dataclass
 import datetime
 import logging
 import os
 import shutil
 import watchfiles
-
-
-NAV_OVERRIDES = {
-    'index': ('hey', '/'),
-    'imprint': ('imprint', None),
-}
-
-
-OUTPUT_OVERRIDES = {
-    'index': "index.html"
-}
 
 
 def parse_args():
@@ -58,6 +48,13 @@ def watch(source_dir: str, output_dir: str):
         rebuild(source_dir, output_dir)
 
 
+@dataclass
+class Page:
+    name: str
+    content: str
+    config: dict
+
+
 def rebuild(source_dir: str, output_dir: str):
     public_dir = os.path.join(source_dir, "public")
     pages_dir = os.path.join(source_dir, "pages")
@@ -69,18 +66,20 @@ def rebuild(source_dir: str, output_dir: str):
     shutil.copytree(public_dir, os.path.join(output_dir, "public"))
 
     pages = []
-    for filename in sorted(os.listdir(pages_dir)):
-        name = strip_before_first(strip_after_last(filename, '.'), '_')
-        pages.append((name, os.path.join(pages_dir, filename)))
+    for pagepath in sorted(os.listdir(pages_dir)):
+        pagecontent, cfg = parse_page_config(
+            get_file_contents(pages_dir, pagepath))
+        name = cfg.get("title") or \
+            strip_before_first(strip_after_last(pagepath, '.'), '_')
+        pages.append(Page(name=name, content=pagecontent.strip(), config=cfg))
 
-    for (pagename, pagepath) in pages:
-        pagecontent = get_file_contents(pagepath)
+    for page in pages:
         parsedcontent = parse_templates(
-            pagecontent, pagename, [p for (p, _) in pages], template_dir)
+            page.content, page, pages, template_dir)
 
-        outpath = os.path.join(output_dir, pagename, "index.html")
-        if pagename in OUTPUT_OVERRIDES:
-            outpath = os.path.join(output_dir, OUTPUT_OVERRIDES[pagename])
+        outpath = os.path.join(output_dir, page.name, "index.html")
+        if output := page.config.get("output"):
+            outpath = os.path.join(output_dir, output)
 
         outdir = os.path.dirname(outpath)
         if not os.path.exists(outdir):
@@ -90,7 +89,29 @@ def rebuild(source_dir: str, output_dir: str):
             out.write(parsedcontent)
 
 
-def parse_templates(content: str, pagename: str, pages: list[str], template_dir: str):
+def parse_page_config(content: str):
+    if not content.startswith("+++"):
+        return content, {}
+
+    content = content[3:]
+
+    if "+++" not in content:
+        raise Exception("invalid page configuration")
+
+    cfg = {}
+    i = content.index("+++")
+    cfgstr = content[:i]
+
+    for line in cfgstr.splitlines():
+        if len(line.strip()) == 0:
+            continue
+        [key, val] = [e.strip() for e in line.split("=", 2)]
+        cfg[key] = val
+
+    return content[i+4:], cfg
+
+
+def parse_templates(content, page: Page, pages: list[Page], template_dir: str):
     template = find_next_template(content)
 
     while True:
@@ -108,10 +129,13 @@ def parse_templates(content: str, pagename: str, pages: list[str], template_dir:
             ext_template = args[0]
             template_contents = get_file_contents(
                 template_dir, f"{ext_template}.html")
-            (start, end, _) = find_template(template_contents, "pagecontent")
+            tpl = find_template(template_contents, "pagecontent")
+            if tpl == None:
+                raise Exception("'pagecontent' not found in extended template")
+            (start, end, _) = tpl
             content = template_contents[:start] + \
                 content + template_contents[end+1:]
-            content = parse_templates(content, pagename, pages, template_dir)
+            content = parse_templates(content, page, pages, template_dir)
         elif id == "use":
             if len(args) == 0:
                 raise Exception(
@@ -120,24 +144,18 @@ def parse_templates(content: str, pagename: str, pages: list[str], template_dir:
             template_contents = get_file_contents(
                 template_dir, f"{use_template}.html")
             template_contents = parse_templates(
-                template_contents, pagename, pages, template_dir)
+                template_contents, page, pages, template_dir)
             content = content[:start] + template_contents + content[end+1:]
         elif id == "pagename":
-            name = pagename
-            if pagename in NAV_OVERRIDES:
-                (name, _) = NAV_OVERRIDES[pagename]
-            content = content[:start] + name + content[end+1:]
+            content = content[:start] + page.name + content[end+1:]
         elif id == "navitems":
             nav_items = []
-            for page in pages:
-                name = page
-                path = '/' + page
-                if page in NAV_OVERRIDES:
-                    (name, path) = NAV_OVERRIDES[page]
-                    if path == None:
-                        continue
-                active = ' class="active"' if page == pagename else ""
-                nav_items.append(f'<a href="{path}"{active}>{name}</a>')
+            for p in pages:
+                if strtobool(p.config.get("navignore")):
+                    continue
+                path = (p.config.get("path") or '/' + p.name)
+                active = ' class="active"' if p.name == page.name else ""
+                nav_items.append(f'<a href="{path}"{active}>{p.name}</a>')
             content = content[:start] + "\n".join(nav_items) + content[end+1:]
         elif id == "currentyear":
             year = datetime.datetime.now().year
@@ -187,6 +205,10 @@ def find_template(content: str, target_id: str):
         if id == target_id:
             return (start+offset, end+offset, args)
         offset += end+1
+
+
+def strtobool(s: str):
+    return s is not None and s.strip().lower() in ["true", "1", "yes", "t", "on"]
 
 
 if __name__ == "__main__":

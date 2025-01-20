@@ -1,0 +1,77 @@
+- title: pc hardware
+  items:
+    - name: AMD Ryzen 7 5800X (CPU)
+      link: https://geizhals.de/amd-ryzen-7-5800x-100-100000063wof-a2392525.html
+    - name: Kingston HyperX Fury DDR4 CL15 32GB (RAM)
+      link: https://geizhals.de/kingston-hyperx-fury-schwarz-dimm-kit-32gb-hx424c15fb4k2-32-a2314792.html
+    - name: MSI GeForce RTX 3080 Gaming Z Trio (GPU)
+      link: https://geizhals.de/msi-geforce-rtx-3080-gaming-z-trio-lhr-10g-v389-203r-a2544316.html
+    - name: ASUS ROG Strix X570-F (Mainboard)
+      link: https://geizhals.de/asus-rog-strix-x570-f-gaming-90mb1160-m0eay0-a2079030.html
+    - name: Samsung SSD 970 EVO Plus 1TB (SSD 1)
+      link: https://geizhals.de/samsung-ssd-970-evo-plus-1tb-mz-v7s1t0bw-a1972735.html
+    - name: Kingston KC3000 2TB (SSD 2)
+      link: https://geizhals.de/kingston-kc3000-pcie-4-0-nvme-ssd-2tb-skc3000s-2048g-a2621457.html
+    - name: Seagate BarraCuda Compute 2TB (HDD 1)
+      link: https://geizhals.eu/seagate-barracuda-compute-2tb-st2000dm008-a1700138.html
+    - name: Seagate BarraCuda Compute 8TB (Archive HDD)
+      link: https://geizhals.de/seagate-barracuda-compute-8tb-st8000dm004-a1627294.html
+
+- title: periphery
+  items:
+    - name: ASUS TUF Gaming VG27AQ, 27" (Display)
+      link: https://geizhals.de/asus-tuf-gaming-vg27aq-90lm0500-b01370-a2112120.html
+    - name: ASUS VS229HV 21.5" (Display)
+      link: https://geizhals.de/asus-vs229hv-90lme9501t02231c-a1031968.html
+    - name: Logitech G Pro X Superlight 2 (Mouse)
+      link: https://geizhals.de/logitech-g-pro-x-superlight-2-lightspeed-gaming-mouse-v139760.html
+    - name: Keychron K6 RGB w/ Gateron Brown Hot Swappable (Keyboard)
+      link: https://geizhals.de/keychron-k6-k6-u3-de-a2733410.html
+    - name: beyerdynamic DT 990 PRO (Headphones)
+      link: https://geizhals.eu/beyerdynamic-dt-990-pro-459-038-a114314.html
+    - name: RØDE Procaster (Desktop Microphone)
+      link: https://geizhals.de/r-de-procaster-a1062389.html
+    - name: RØDE NT1-A (Secondary Microphone)
+      link: https://geizhals.de/r-de-nt1-a-a183277.html
+    - name: dbx 286s (Mic Preamp/Processor)
+      link: https://geizhals.de/dbx-286s-a1079081.html
+    - name: M-Audio Air 192 | 4 (Audio Interface)
+      link: https://geizhals.de/m-audio-air-192-4-a2162277.html
+    - name: RØDE smartLav+ (Lavaliermikrofon)
+      link: https://geizhals.de/r-de-smartlav-a1211806.html
+    - name: Zoom H1n (Mobiler Audiorecorder)
+      link: https://geizhals.de/zoom-h1n-schwarz-a1761597.html
+    - name: Microsoft Xbox Elite Series 2 (Controller)
+      link: https://geizhals.de/microsoft-xbox-elite-wireless-controller-series-2-v84004.html
+
+- title: camera gear
+  items:
+    - name: Sony ZV-E10
+      link: https://geizhals.de/sony-zv-e10-body-zv-e10-a2571418.html
+    - name: Samyang 16mm T2.2 VDSLR ED AS UMC CS II
+      link: https://www.pcmag.com/reviews/samyang-16mm-t22-vdslr-ed-as-umc-cs-ii
+    - name: Sigma 28-70mm F2.8 DG DN
+      link: https://www.pcmag.com/reviews/sigma-28-70mm-f28-dg-dn-contemporary
+    - name: Tamron 24mm F2.8 Di III OSD M1:2
+      link: https://www.pcmag.com/reviews/tamron-24mm-f28-di-iii-osd-m12
+    - name: Sony FE 50mm F1.8
+      link: https://electronics.sony.com/imaging/lenses/full-frame-e-mount/p/sel50f18f-2
+    - name: Sony FE 55-210mm F4.5-6.3 OSS
+      link: https://electronics.sony.com/imaging/lenses/all-e-mount/p/sel55210
+    - name: Apple iPhone 15 Pro
+      link: https://geizhals.de/apple-iphone-15-pro-256gb-titan-blau-a3020680.html
+
+- title: software
+  items:
+    - name: Blackmagic DaVinci Resolve
+      link: https://www.blackmagicdesign.com/products/davinciresolve
+    - name: Adobe Lightroom
+      link: https://lightroom.adobe.com/
+    - name: Adobe Photoshop
+      link: https://photoshop.adobe.com/
+    - name: Affinity Photo
+      link: https://affinity.serif.com/en-gb/photo/
+    - name: Affinity Designer
+      link: https://affinity.serif.com/en-gb/designer/
+    - name: Affinity Publisher
+      link: https://affinity.serif.com/en-gb/publisher/
