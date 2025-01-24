@@ -4,8 +4,9 @@
 :root {
   --clr-background-1: #222222;
   --clr-text: #dbdbdb;
-  --clr-text-2: #dbdbdbaa;
+  --clr-text-2: hsl(from var(--clr-text) h s l / 0.7);
   --clr-accent: #e5385e;
+  --clr-highlight: var(--clr-accent);
 }
 
 * {
@@ -79,6 +80,22 @@ footer {
 
 ul > li {
   list-style-type: square;
+}
+
+@keyframes target-highlight {
+  0% {
+    background-color: hsl(from var(--clr-highlight) h s l / 0);
+  }
+  50% {
+    background-color: hsl(from var(--clr-highlight) h s l / 0.2);
+  }
+  100% {
+    background-color: hsl(from var(--clr-highlight) h s l / 0);
+  }
+}
+
+:target {
+  animation: target-highlight 1.5s ease-in-out;
 }
 
 .emoji-heading {
