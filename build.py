@@ -5,7 +5,9 @@ from dataclasses import dataclass
 import datetime
 import logging
 import os
+import shlex
 import shutil
+import subprocess
 import watchfiles
 
 
@@ -160,6 +162,12 @@ def parse_templates(content, page: Page, pages: list[Page], template_dir: str):
         elif id == "currentyear":
             year = datetime.datetime.now().year
             content = content[:start] + str(year) + content[end+1:]
+        elif id == "exec":
+            if len(args) == 0:
+                raise Exception(
+                    "template 'exec' needs at least one argument")
+            res = subprocess.check_output(args)
+            content = content[:start] + res.decode('utf-8') + content[end+1:]
         else:
             raise Exception(f"unsupported template '{id}'")
 
@@ -189,7 +197,7 @@ def find_next_template(content: str):
 
     start = content.index("{{")
     end = content.index("}}") + 1
-    split = content[start+2:end-1].strip().split()
+    split = shlex.split(content[start+2:end-1].strip())
     if len(split) < 1:
         raise Exception("invalid template format")
     return (start, end, split[0], split[1:])
