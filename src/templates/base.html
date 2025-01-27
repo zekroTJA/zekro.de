@@ -36,7 +36,7 @@
     </nav>
     <main>{{pagecontent}}</main>
     <footer>
-      <span>© Ringo Hoffmann {{currentyear}}-present</span>
+      <span>© Ringo Hoffmann {{currentdate "%Y"}}-present</span>
       <span>|</span>
       <span>build {{ exec git rev-parse --short HEAD }} at {{ exec date "+%Y-%m-%d %T" }} </span>
       <span>|</span>
