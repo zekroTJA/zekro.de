@@ -2,6 +2,8 @@
 
 Here you find the sources of my personal web page. It is built using vanilla HTML, CSS and a tiny bit of JavaScript. Also, it is built using my own static site generator [temple](https://github.com/shellshape/temple) to allow some templating and avoid code duplication.
 
+The page is using Icons from [tabler Icons](https://tabler.io/icons) and [Simple Icons](https://simpleicons.org/). The used font is [Geist Mono](https://github.com/vercel/geist-font). My logo (in the nav bar and favicon) is made by myself.
+
 # Copyright
 
 Copyright (c) 2025 Ringo Hoffmann
