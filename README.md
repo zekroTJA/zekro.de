@@ -1,6 +1,6 @@
-# new.zekro.de
+# 🌐 [zekro.de](https://zekro.de)
 
-Here you find the sources of my new ***work in progress*** web page.
+Here you find the sources of my personal web page. It is built using vanilla HTML, CSS and a tiny bit of JavaScript. Also, it is built using my own static site generator [temple](https://github.com/shellshape/temple) to allow some templating and avoid code duplication.
 
 # Copyright
 
