@@ -1,4 +1,4 @@
-@import url("https://api.fonts.coollabs.io/css2?family=Geist+Mono:wght@400,600&display=swap");
+@import url("/public/fonts.css");
 @import url("https://languages.ranna.dev/languages.bg.css");
 
 :root {
@@ -22,7 +22,7 @@ html {
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: normal;
   color: var(--clr-text);
 }
 
@@ -134,7 +134,7 @@ ul > li {
     color: var(--clr-accent);
     text-decoration-line: underline;
     text-decoration-color: var(--clr-accent);
-    font-weight: 600;
+    font-weight: bold;
   }
 
   > .logo {
