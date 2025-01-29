@@ -23,7 +23,7 @@
     container.appendChild(header);
 
     const excerpt = document.createElement("p");
-    excerpt.innerText = post.excerpt.split(" ").slice(0, 15).join(" ") + "...";
+    excerpt.innerText = post.excerpt.split(" ").slice(0, 30).join(" ") + " ...";
     container.appendChild(excerpt);
 
     root.appendChild(container);

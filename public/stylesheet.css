@@ -14,7 +14,6 @@
 }
 
 html {
-  width: 100vw;
   height: 100vh;
   display: flex;
 
@@ -37,6 +36,15 @@ body {
   padding: 1em 1em;
 }
 
+body::-webkit-scrollbar {
+  width: 0.6em;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-left: 2px solid hsl(from var(--clr-text) h s l / 1);
+}
+
 a {
   color: inherit;
   text-decoration-line: none;
@@ -46,7 +54,7 @@ a {
   text-decoration-color: var(--clr-text-2);
 
   &:hover {
-    text-decoration-color: var(--clr-text-1);
+    text-decoration-color: var(--clr-text);
   }
 }
 
@@ -129,8 +137,12 @@ ul > li {
     font-weight: 600;
   }
 
-  img.logo {
+  > .logo {
     height: 1.25em;
+    img {
+      aspect-ratio: 1;
+      height: 100%;
+    }
   }
 }
 
