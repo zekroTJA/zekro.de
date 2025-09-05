@@ -302,3 +302,50 @@ ul > li {
     }
   }
 }
+
+.uploadplan-container {
+  > table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+
+    td,
+    th {
+      border: solid 1px white;
+      text-align: start;
+      padding: 0.2em 0.4em;
+    }
+
+    span {
+      display: block;
+
+      &.sub {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        line-height: 1em;
+      }
+    }
+
+    > thead {
+      background-color: rgba(255, 255, 255, 20%);
+    }
+
+    > tbody {
+      tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 5%);
+      }
+    }
+
+    .a {
+      background-color: #990f31;
+    }
+
+    .b {
+      background-color: #99710f;
+    }
+
+    .s {
+      background-color: #0f9978;
+    }
+  }
+}
