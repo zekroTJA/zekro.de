@@ -44,7 +44,7 @@ def main():
 
     projects = data["projects"]
 
-    time_slots = set(v["at"] for v in projects)
+    time_slots = sorted(set(v["at"] for v in projects))
 
     schedule = {}
     for wdid, _ in WEEKDAYS.items():
