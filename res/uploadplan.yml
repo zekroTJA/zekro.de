@@ -3,10 +3,12 @@ projects:
     name: Evolution
     wdays: [mon, wed, fri]
     at: "16:00"
+    url: https://www.youtube.com/playlist?list=PLdqLfCrzPasoRuwmTbxbQapw3QsysvUYP
   - id: b
     name: Elden Ring
     wdays: [tue, thu, sun]
     at: "16:00"
+    url: https://www.youtube.com/playlist?list=PLdqLfCrzPasrZ4XTSJPsvijzEvFbOMw5o
   - id: s
     name: Special
     sub: Random Projekte wie Let's Tests, Commentaries, Info-Videos, Edits, ...

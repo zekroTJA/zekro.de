@@ -73,9 +73,14 @@ def main():
         for entry in entries:
             if entry:
                 print_indent(3, f'<td class="{entry["id"]}">')
-                print_indent(4, f"<span>{entry['name']}</span>")
+                if url := entry.get("url"):
+                    print_indent(4, f'<a href="{url}" target="_blank">')
+                else:
+                    print_indent(4, "<a>")
+                print_indent(5, f"<span>{entry['name']}</span>")
                 if sub := entry.get("sub"):
-                    print_indent(4, f'<span class="sub">{sub}</span>')
+                    print_indent(5, f'<span class="sub">{sub}</span>')
+                print_indent(4, "</a>")
                 print_indent(3, "</td>")
             else:
                 print_indent(3, "<td></td>")

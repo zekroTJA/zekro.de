@@ -304,6 +304,8 @@ ul > li {
 }
 
 .uploadplan-container {
+  margin-top: 1em;
+
   > table {
     border-collapse: collapse;
     width: 100%;
@@ -314,6 +316,15 @@ ul > li {
       border: solid 1px white;
       text-align: start;
       padding: 0.2em 0.4em;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: inherit;
+      &[href]:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
 
     span {
