@@ -1,0 +1,14 @@
+projects:
+  - id: a
+    name: Evolution
+    wdays: [mon, wed, fri]
+    at: "16:00"
+  - id: b
+    name: Elden Ring
+    wdays: [tue, thu, sun]
+    at: "16:00"
+  - id: s
+    name: Special
+    sub: Random Projekte wie Let's Tests, Commentaries, Info-Videos, Edits, ...
+    wdays: [sat]
+    at: "18:00"
