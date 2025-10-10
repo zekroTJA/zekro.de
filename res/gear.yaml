@@ -19,10 +19,8 @@
 
 - title: periphery
   items:
-    - name: ASUS TUF Gaming VG27AQ, 27" (Display)
-      link: https://geizhals.de/asus-tuf-gaming-vg27aq-90lm0500-b01370-a2112120.html
-    - name: ASUS VS229HV 21.5" (Display)
-      link: https://geizhals.de/asus-vs229hv-90lme9501t02231c-a1031968.html
+    - name: GIGABYTE AORUS FI27Q-P, 27" (Main & Second Display)
+      link: https://geizhals.de/gigabyte-aorus-fi27q-p-a2143689.html
     - name: Logitech G Pro X Superlight 2 (Mouse)
       link: https://geizhals.de/logitech-g-pro-x-superlight-2-lightspeed-gaming-mouse-v139760.html
     - name: Keychron K6 RGB w/ Gateron Brown Hot Swappable (Keyboard)
@@ -43,6 +41,8 @@
       link: https://geizhals.de/zoom-h1n-schwarz-a1761597.html
     - name: Microsoft Xbox Elite Series 2 (Controller)
       link: https://geizhals.de/microsoft-xbox-elite-wireless-controller-series-2-v84004.html
+    - name: Wacom Intuos Pro 2017 Medium (Drawing Tablet)
+      link: https://geizhals.de/wacom-intuos-pro-m-rev-2-pth-660-n-a1558845.html
 
 - title: camera gear
   items:
@@ -71,9 +71,9 @@
       link: https://lightroom.adobe.com/
     - name: Adobe Photoshop
       link: https://photoshop.adobe.com/
-    - name: Affinity Photo
+    - name: Affinity Photo 2
       link: https://affinity.serif.com/en-gb/photo/
-    - name: Affinity Designer
+    - name: Affinity Designer 2
       link: https://affinity.serif.com/en-gb/designer/
-    - name: Affinity Publisher
-      link: https://affinity.serif.com/en-gb/publisher/
+    - name: Clip Studio Paint Pro
+      link: https://www.clipstudio.net/en/
