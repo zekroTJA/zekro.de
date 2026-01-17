@@ -1,16 +1,16 @@
 projects:
   - id: a
     name: Evolution
-    wdays: [mon, wed, fri]
+    wdays: [mon, wed, fri, sun]
     at: "16:00"
     url: https://www.youtube.com/playlist?list=PLdqLfCrzPasoRuwmTbxbQapw3QsysvUYP
   - id: b
-    name: Elden Ring
-    wdays: [tue, thu, sun]
+    name: Hytale Co-Op
+    wdays: [tue, thu, sat]
     at: "16:00"
-    url: https://www.youtube.com/playlist?list=PLdqLfCrzPasrZ4XTSJPsvijzEvFbOMw5o
-  - id: s
-    name: Special
-    sub: Random Projekte wie Let's Tests, Commentaries, Info-Videos, Edits, ...
-    wdays: [sat]
-    at: "18:00"
+    url: https://youtube.com/playlist?list=PLdqLfCrzPasqjmTL0AorKS_4t_JIlM5FG&si=4Sxeq5w3oDVEKTrx
+#  - id: s
+#    name: Special
+#    sub: Random Projekte wie Let's Tests, Commentaries, Info-Videos, Edits, ...
+#    wdays: [sat]
+#    at: "18:00"
