@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -23,7 +23,9 @@
     <footer>
       <span>© Ringo Hoffmann {{currentdate "%Y"}}-present</span>
       <span>|</span>
-      <span>build {{ exec git rev-parse --short HEAD }} at {{ exec date "+%Y-%m-%d %T" }} </span>
+      <a href="https://github.com/zekroTJA/zekro.de/commit/{{ exec git rev-parse HEAD }}"
+        >build {{ exec git rev-parse --short HEAD }} at {{ exec date "+%Y-%m-%d %T" }}
+      </a>
       <span>|</span>
       <a href="/imprint">imprint</a>
       <span>|</span>
